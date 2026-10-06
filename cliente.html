@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Final Boss</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active"  aria-current="page" href="cliente.html">Cliente</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="eventos.html">Evento</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main class="container py-5">
+        <section class="text-center mb-5">
+            <h1 class="fw-bold">Clientes de Final Boss</h1>
+            <p class="text-muted">Administra Ya!</p>
+        </section>
+        <section class="card shadow-sm mb-5">
+            <div class="card-header">
+                <h2 class="h5 mb-0" id="idFormulario">Registrar cliente</h2>
+            </div>
+            <div class="card-body">
+                <form id="formCliente" novalidate>
+                    <div class="mb-3">
+                      <label for="txtNombre" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="txtNombre" maxlength="100">
+                    </div>
+                    <div class="mb-3">
+                      <label for="txtApellido" class="form-label">Apellido</label>
+                      <input type="text" class="form-control" id="txtApellido" maxlength="100">
+                    </div>
+                    <div class="mb-3">
+                      <label for="txtTelefono" class="form-label">Telefono</label>
+                      <input type="tel" class="form-control" id="txtTelefono" maxlength="15">
+                    </div>
+                    <div class="mb-3">
+                      <label for="txtEmail" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="txtEmail" maxlength="100">
+                    </div>
+                    <div class="mb-3">
+                      <label for="txtDireccion" class="form-label">Direccion</label>
+                      <input type="text" class="form-control" id="txtDireccion" maxlength="200">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                    <button type="button" class="btn btn-secondary d-none" id="btnCancelar">Cancelar</button>
+                </form>
+            </div>
+        </section>
+        <section class="card shadow-sm">
+            <div class="card-header">
+                <h2 class="h5 mb-0">Listado de clientes</h2>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Telefono</th>
+                            <th>Email</th>
+                            <th>Direccion</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaClientes"></tbody>
+                </table>
+            </div>
+        </section>
+      </main>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="js/controller/clienteController.js"></script>
+</html>
